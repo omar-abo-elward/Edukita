@@ -1,8 +1,8 @@
-import 'package:educita/parts-of-matrial.dart';
+import 'package:educita/Parent_screens/parents%20arabic.dart';
 import 'package:flutter/material.dart';
 
-class MaterialScreen extends StatelessWidget {
-  const MaterialScreen({super.key});
+class ClassGrades extends StatelessWidget {
+  const ClassGrades({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class MaterialScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const PartsOfMatrial()));
+                        builder: (context) => const arabic_grades()));
               },
               child: Column(
                 children: [
@@ -48,7 +48,7 @@ class MaterialScreen extends StatelessWidget {
                                 backgroundColor: Colors.blue,
                                 radius: 35,
                                 child: Image.asset(
-                                  'assets/classroom.png',
+                                  'assets/image.png',
                                   width: 100,
                                   height: 70,
                                 ),
@@ -80,4 +80,4 @@ class MaterialScreen extends StatelessWidget {
   }
 }
 
-List<String> subject = ['English', 'Arabic', 'Math', 'Gegoraphi'];
+List<String> subject = ['English', 'Arabic', 'Math'];

@@ -1,4 +1,5 @@
-import 'package:educita/schadual_screen.dart';
+import 'package:educita/Login_Screens/login%20screen.dart';
+import 'package:educita/Student_screens/profile_screens_into/schadual_screen.dart';
 import 'package:flutter/material.dart';
 
 class Profiles extends StatelessWidget {
@@ -7,6 +8,20 @@ class Profiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Profile",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.blue,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white70,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
@@ -66,7 +81,8 @@ class Profiles extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const ScheduleScreen()));
+                                      builder: (context) =>
+                                          const ScheduleScreen()));
                             },
                           ),
                           _buildOptionTile(
@@ -83,7 +99,36 @@ class Profiles extends StatelessWidget {
                     ),
                     const SizedBox(
                       height: 80,
-                    )
+                    ),
+                    ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 12, horizontal: 24),
+                        backgroundColor: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      icon: const Icon(
+                        Icons.logout,
+                        color: Colors.white70,
+                      ),
+                      label: const Text(
+                        "Logout",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) {
+                          return const Login_Screen();
+                        }));
+                      },
+                    ),
+                    const SizedBox(height: 13),
                   ],
                 ),
               ),

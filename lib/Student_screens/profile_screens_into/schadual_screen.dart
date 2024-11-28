@@ -11,7 +11,7 @@ class ScheduleScreen extends StatelessWidget {
           "Schedule",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: const Color.fromRGBO(9, 97, 245, 1),
+        backgroundColor: Colors.blue,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,

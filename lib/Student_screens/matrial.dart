@@ -1,8 +1,8 @@
-import 'package:educita/soulation-task.dart';
+import 'package:educita/Material/Arabic.dart';
 import 'package:flutter/material.dart';
 
-class Tasks extends StatelessWidget {
-  const Tasks({super.key});
+class MaterialScreen extends StatelessWidget {
+  const MaterialScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +20,13 @@ class Tasks extends StatelessWidget {
               height: 1,
             ),
           ),
-          itemBuilder: (context, index) => GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SoulationTask()));
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Arabic()));
+              },
               child: Column(
                 children: [
                   Container(
@@ -48,7 +46,7 @@ class Tasks extends StatelessWidget {
                                 backgroundColor: Colors.blue,
                                 radius: 35,
                                 child: Image.asset(
-                                  'assets/classroom.png',
+                                  'assets/png-clipart-online-class-study-learn-write-think-icon.png',
                                   width: 100,
                                   height: 70,
                                 ),
@@ -80,4 +78,4 @@ class Tasks extends StatelessWidget {
   }
 }
 
-List<String> subject = ['English', 'Arabic', 'Math', 'Gegoraphi'];
+List<String> subject = ['Arabic'];
